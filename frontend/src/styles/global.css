@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg: #0f0f11;
+    --surface: #18181b;
+    --card: #1c1c1f;
+    --border: #2a2a2f;
+    --borderLight: #3a3a42;
+    --accent: #d4a853;
+    --accentDim: #b8902a;
+    --text: #f4f0e8;
+    --textMuted: #9a9490;
+    --textDim: #6b6760;
+    --danger: #ef4444;
+    --success: #22c55e;
+    --info: #60a5fa;
+    --fontDisplay: 'Playfair Display', Georgia, serif;
+    --fontSans: 'DM Sans', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: var(--fontSans); }
+::-webkit-scrollbar { width: 6px; } 
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+@keyframes slideIn { from { transform: translateX(20px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.fade-in { animation: fadeIn 0.3s ease both; }
+
+input, select, textarea {
+    background: var(--surface); border: 1px solid var(--border); color: var(--text);
+    border-radius: 8px; padding: 0.6rem 0.9rem; font-family: var(--fontSans);
+    font-size: 14px; outline: none; transition: border-color 0.2s;
+    width: 100%;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--accent); }
+button { cursor: pointer; font-family: var(--fontSans); transition: all 0.2s; }
+a { color: inherit; text-decoration: none; }
