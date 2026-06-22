@@ -91,7 +91,8 @@ const AdminDashboard = () => {
                     ["👥 Users", "/admin/users"], 
                     ["🏷️ Categories", "/admin/categories"], 
                     ["🎟️ Coupons", "/admin/coupons"], 
-                    ["⭐ Reviews", "/admin/reviews"]
+                    ["⭐ Reviews", "/admin/reviews"],
+                    ["📡 Ping Tool", "/admin/ping"]
                 ].map(([label, target]) => (
                     <button 
                         key = {target} 

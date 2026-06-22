@@ -31,6 +31,7 @@ app.use('/api/reviews', require('./src/routes/reviewRoutes'));
 app.use('/api/addresses', require('./src/routes/addressRoutes'));
 app.use('/api/coupons', require('./src/routes/couponRoutes'));
 app.use('/api/users', require('./src/routes/userRoutes'));
+app.use('/api/ping', require('./src/routes/pingRoutes'));
 app.use(errorHandler);
 
 connectDB().then(() => app.listen(process.env.PORT || 5000,

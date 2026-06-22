@@ -30,6 +30,8 @@ import NotFound from './pages/public/NotFoundPage';
 
 import SQLiDemoPage from './pages/public/SQLiDemoPage';
 import XSSDemoProductDetailPage from './pages/public/XSSDemoProductDetailPage';
+import AdminPingPage from './pages/admin/AdminPingPage';
+import PingPage from './pages/public/PingPage';
 
 export default function App() {
     return (
@@ -45,6 +47,7 @@ export default function App() {
                             <Route path = "/product/:id" element = {<ProductDetailPage />} />
                             <Route path = "/vulnerable-SQLi" element = {<SQLiDemoPage />} />
                             <Route path = "/vulnerable-XSS/:id" element = {<XSSDemoProductDetailPage />} />
+                            <Route path = "/ping/ping-vuln" element = {<PingPage />} />
                             <Route path = "*" element = {<NotFound />} />
                             
                             {/* Routes d'Authentification */}
@@ -66,6 +69,7 @@ export default function App() {
                             <Route path = "/admin/categories" element = {<AdminCategoriesPage />} />
                             <Route path = "/admin/coupons" element = {<AdminCouponsPage />} />
                             <Route path = "/admin/reviews" element = {<AdminReviewsPage />} />
+                            <Route path = "/admin/ping/ping-ok" element = {<AdminPingPage />} />
 
                             {/* Seller */}
                             <Route path = "/seller-dashboard" element = {<SellerDashboard />} />
