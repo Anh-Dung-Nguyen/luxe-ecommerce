@@ -32,6 +32,8 @@ import SQLiDemoPage from './pages/public/SQLiDemoPage';
 import XSSDemoProductDetailPage from './pages/public/XSSDemoProductDetailPage';
 import AdminPingPage from './pages/admin/AdminPingPage';
 import PingPage from './pages/public/PingPage';
+import UploadVulnPage from './pages/public/UploadVulnPage';
+import UploadPage from './pages/public/UploadPage';
 
 export default function App() {
     return (
@@ -48,6 +50,8 @@ export default function App() {
                             <Route path = "/vulnerable-SQLi" element = {<SQLiDemoPage />} />
                             <Route path = "/vulnerable-XSS/:id" element = {<XSSDemoProductDetailPage />} />
                             <Route path = "/ping/ping-vuln" element = {<PingPage />} />
+                            <Route path = "/upload/uploadVuln" element = {<UploadVulnPage />} />
+                            <Route path = "/upload/upload" element = {<UploadPage />} />
                             <Route path = "*" element = {<NotFound />} />
                             
                             {/* Routes d'Authentification */}
