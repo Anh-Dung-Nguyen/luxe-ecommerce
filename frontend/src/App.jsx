@@ -34,6 +34,9 @@ import AdminPingPage from './pages/admin/AdminPingPage';
 import PingPage from './pages/public/PingPage';
 import UploadVulnPage from './pages/public/UploadVulnPage';
 import UploadPage from './pages/public/UploadPage';
+import PathTraversalVulnPage from './pages/public/PathTraversalVulnPage';
+import PathTraversalPage from './pages/public/PathTraversalPage';
+import NewsViewer from './pages/public/NewsViewer';
 
 export default function App() {
     return (
@@ -52,6 +55,10 @@ export default function App() {
                             <Route path = "/ping/ping-vuln" element = {<PingPage />} />
                             <Route path = "/upload/uploadVuln" element = {<UploadVulnPage />} />
                             <Route path = "/upload/upload" element = {<UploadPage />} />
+                            <Route path = "/path/pathVuln" element = {<PathTraversalVulnPage />} />
+                            <Route path = "/path/pathOK" element = {<PathTraversalPage />} />
+                            <Route path = "/path/newsViewer" element = {<NewsViewer />} />
+
                             <Route path = "*" element = {<NotFound />} />
                             
                             {/* Routes d'Authentification */}

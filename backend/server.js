@@ -33,6 +33,7 @@ app.use('/api/coupons', require('./src/routes/couponRoutes'));
 app.use('/api/users', require('./src/routes/userRoutes'));
 app.use('/api/ping', require('./src/routes/pingRoutes'));
 app.use('/api/uploadFile', require('./src/routes/uploadRoutes'));
+app.use('/api/path', require('./src/routes/pathRoutes'));
 app.use(errorHandler);
 
 connectDB().then(() => app.listen(process.env.PORT || 5000,
